@@ -6,6 +6,7 @@ import { FormsModule }   from '@angular/forms';
 
 //important components
 import { AppComponent }   from './app.component';
+import { HeroDetailComponent } from './hero-detail.component';
 
 @NgModule({
 
@@ -15,7 +16,10 @@ import { AppComponent }   from './app.component';
   ], //platform specific
 
   //ad components
-  declarations: [ AppComponent ],
+  declarations: [ 
+    AppComponent,
+    HeroDetailComponent 
+    ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
