@@ -7,29 +7,25 @@ import { RouterModule } from '@angular/router';
 
 //important components
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroService } from './hero.service';
 
+import { AppRoutingModule }     from './app-routing.module';
+
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
-    //The forRoot method gives us the Router service providers and directives 
-    //needed for routing, and performs the initial navigation
-    // based on the current browser URL
-    RouterModule.forRoot([
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      }
-    ])
-  ], //platform specific
+    FormsModule,//platform specific
+    AppRoutingModule,
+  ],
   //ad components
   declarations: [
     AppComponent,
     HeroDetailComponent,
-    HeroesComponent
+    HeroesComponent,
+    DashboardComponent,
   ],
   providers: [
     HeroService
